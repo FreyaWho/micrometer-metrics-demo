@@ -16,7 +16,7 @@ import java.lang.reflect.Method;
 @Aspect
 public class TimerAspect {
 
-    @Around(value = "execution(* club.throwable.smp.service.*Service.*(..))")
+    @Around(value = "execution(* micrometer.application.*Service.*(..))")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         Signature signature = joinPoint.getSignature();
         MethodSignature methodSignature = (MethodSignature) signature;

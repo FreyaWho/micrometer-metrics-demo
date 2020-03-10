@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 public class Message {
     private String orderId;
     private Long userId;
-    private String content;
 
     public String getOrderId(){
         return orderId;
@@ -26,11 +25,4 @@ public class Message {
         this.userId = userId;
     }
 
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
 }

@@ -42,9 +42,7 @@ public class MessageService implements InitializingBean {
         EXECUTOR.execute(() -> {
             while (true) {
                 try {
-                    Message message = REAL_QUEUE.take();
-                    log.info("模拟发送短信,orderId:{},userId:{},内容:{},耗时:{}毫秒", message.getOrderId(), message.getUserId(),
-                            message.getContent(), R.nextInt(50));
+                    REAL_QUEUE.take();
                 } catch (Exception e) {
                     throw new IllegalStateException(e);
                 }
